@@ -1,0 +1,7 @@
+.activatedBadge {
+    filter : saturate(1);
+}
+
+.deactivatedBadge {
+    filter : saturate(0);
+}
