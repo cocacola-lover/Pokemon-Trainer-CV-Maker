@@ -1,18 +1,15 @@
-import React from "react";
 
-export default class MyForm extends React.Component {
+export default function MyForm (props) {
 
-    render () {
-        return this.props.edit ? (
-            <div>
-                <label htmlFor={this.props.id}>{this.props.label ?? ""}</label>
-                <input type="text" 
-                       maxLength="30"
-                       id={this.props.id}
-                       onChange={(e) => this.props.updateParentValue(e.target.value)}/>
-            </div>
-        ) : (<div>
-            {this.props.result}
-        </div>)
-    }
+    return props.edit ? (
+        <div>
+            <label htmlFor={props.id}>{props.label ?? ""}</label>
+            <input type="text" 
+                   maxLength="30"
+                   id={props.id}
+                   onChange={(e) => props.updateParentValue(e.target.value)}/>
+        </div>
+    ) : (<div>
+        {props.result}
+    </div>)
 }
